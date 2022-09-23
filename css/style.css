@@ -149,29 +149,16 @@ footer {
 
 /* affichage avec grid */
 
-#grid-example {
-    display: flex;
-}
 
-#grid-example aside {
-    width: 30%;
-}
 
 #grid-container {
-    width: 70%;
+    width: 100%;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 50% 50%;
     grid-gap: 5px;
 }
 
-#grid-container img:first-of-type {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
 
-    width: 100%;
-}
 
 /*
 en utilisant des media-queries `max` on "pense" le css dans cet ordre la
