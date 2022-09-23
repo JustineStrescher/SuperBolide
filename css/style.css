@@ -1,0 +1,245 @@
+html  {
+    /* 
+        équivaut à 10px si la police de base vaut bien 16px
+    */
+    /* font-size: 62.5%; */
+}
+
+body {
+    background-color: #2F3848;
+}
+
+#container {
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#container header h1 {
+    border-bottom: 3px solid #add8e6;
+    border-radius: 4px 4px;
+
+    background-color: #f05768;
+    color: white;  
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 1px 1px 1px white;
+    margin-bottom: 15px;
+}
+
+header nav {
+    display:flex;
+    justify-content: space-between;
+}
+
+
+#header__heart--fontsize {
+    /* comme on a fait en sorte que 1rem = 10px => 45 px */
+    font-size: 4.5rem; 
+    font-style: italic;
+}
+
+
+nav a {
+    color: rgb(173, 247, 25);
+    /* text-shadow: 1px 1px 1px rgb(187, 255, 2); */
+    text-decoration: none;
+    font-weight: bold;
+    padding:10px 10px 10px 0;
+}
+
+nav img {
+    width: 20px;
+    /* margin-left: 320px; */
+}
+
+nav a:hover {
+    color: yellowgreen;
+}
+
+main>h2 {
+    color: #00ccff;
+    font-weight: bold;
+    padding : 15px 2px 10px 0;
+    font-style: italic;
+}
+
+main>p {
+    color: white;
+    font-weight: bold;
+    padding:0 10px 10px 0;
+}
+
+main>p a {
+    color: rgb(153, 219, 20);
+    text-decoration: underline;
+}
+
+#central_picture {
+    /* 
+        on positionne le parent pour pouvoir positionner
+        relativement le h2 
+    */
+    position: relative;
+    margin-bottom: 2em;
+}
+
+#central_picture h2{
+    background-color: #f05768;
+    color: white; 
+    text-shadow: 1px 1px 1px white;
+    text-transform: uppercase; 
+    /*
+    quand on passe en positionnement "positionné"
+    on peut / doit appliquer les propriétés top, right, bottom et left
+    */
+    position: absolute;
+    top: 0;
+}
+
+#central_picture img {
+    width: 100%;
+}
+
+#submit {
+    display: flex;
+    align-items: flex-start;
+    /* 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch; 
+    */
+}
+
+#colonne1 {
+    width: 35%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#colonne1 img {
+    width: 50%;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+#colonne1 img:first-of-type {
+    width: 100%;
+}
+
+#colonne2 {
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#colonne2 img {
+    width: 50%;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+aside {
+    background-color: #004488;
+    padding: 30px;
+    width: 30%;
+    margin-left: 20px;
+}
+
+aside h2 {
+    color: #00ccff;
+    border-bottom:1px solid #00ccff;
+    text-transform: uppercase;
+    text-shadow: #00ccff 1px 1px 1px;
+    text-align: left;
+}
+
+aside p {
+    color: rgb(176, 252, 24);
+    font-weight: bold;
+}
+
+aside a {
+    color: rgb(176, 252, 24);
+    text-decoration: underline;
+}
+
+
+footer {
+    color: #00ccff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* affichage avec grid */
+
+#grid-example {
+    display: flex;
+}
+
+#grid-example aside {
+    width: 30%;
+}
+
+#grid-container {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 5px;
+}
+
+#grid-container img:first-of-type {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    width: 100%;
+}
+
+/*
+en utilisant des media-queries `max` on "pense" le css dans cet ordre la
+desktop > tablette > mobile 
+
+
+en utilisant des media-queries `min` on "pense" le css dans cet ordre la
+mobile > tablette > desktop
+*/
+@media screen and (max-device-width: 600px) { 
+    #central_picture {
+        display:none;
+    }
+}
+
+@media screen and (max-device-width: 500px) {
+    #central_picture {
+        display:block;
+    }
+}
+
+#centrage {
+    width: 30vw;
+    height: 30vw;
+    background-color: darkslateblue;
+    color: white;
+    
+    position: fixed;
+    z-index: 5;
+
+    top: calc(50% - 15vw) ;
+    left: calc(50% - 15vw) ;
+}
+
+@media (max-width: 500px) {
+    #centrage {
+        background-color: darkseagreen;
+        
+        position: fixed;
+        z-index: 5;
+
+        top: 0 ;
+        left: 0 ;
+    }
+}
+

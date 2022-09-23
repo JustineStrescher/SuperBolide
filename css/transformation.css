@@ -1,0 +1,281 @@
+body {
+  background-color: #2f3848;
+  font-family: 'Open Sans', monospace, sans-serif;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.title1 {
+  color: white;
+  font-style: italic;
+  font-size: 40px;
+  background-color: #f05768;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  font-weight: bold;
+  border-bottom: 3px solid lightgrey;
+  border-radius: 0 0 10px 10px;
+}
+
+.title2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  font-style: italic;
+  color: #09c;
+  margin: 16px 0;
+}
+
+.header-links {
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__item {
+  display: inline-block;
+}
+
+.menu__link {
+  color: yellowgreen;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.menu__link:hover {
+  color: yellow;
+}
+
+.socials__item {
+  display: inline-block;
+}
+
+.socials__icon {
+  height: 24px;
+  margin-left: 10px;
+}
+
+.white-text {
+  font-size: 0.9em;
+  color: white;
+  line-height: 1.4;
+  margin: 16px 0;
+}
+
+/* Le pseudo élément ::first-line permet de cibler la première ligne */
+.white-text::first-line {
+  color: lightgrey;
+}
+
+.white-text::first-letter {
+  font-size: 3em;
+  margin: 0 4px;
+  line-height: 1;
+  color: lightgrey;
+  font-weight: bold;
+}
+
+.link {
+  color: yellowgreen;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: yellow;
+}
+
+.cam-of-the-week {
+  margin: 16px 0;
+  position: relative;
+}
+
+.cam-of-the-week__title {
+  background-color: #f05768;
+  color: #fff;
+  margin: 0;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cam-of-the-week__picture {
+  width: 100%;
+}
+
+.gallery-submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* GALLERY avec inline & font-size: 0 */
+
+/* .gallery {
+  width: 65%;
+  font-size: 0;
+}
+
+.gallery__thumbnail {
+  width: calc(25% - 8px);
+  margin: 0 8px 8px 0;
+}
+
+.gallery__thumbnail--big {
+  width: calc(50% - 8px);
+  float: left;
+}
+*/
+
+/* GALLERY avec inline-block */
+
+/* .gallery {
+  width: 65%;
+  font-size: 0;
+}
+
+.gallery__thumbnail {
+  width: calc(25% - 8px);
+  display: inline-block;
+  margin: 0 8px 8px 0;
+}
+
+.gallery__thumbnail--big {
+  width: calc(50% - 8px);
+  float: left;
+}
+
+/* GALLERY avec float */
+.gallery {
+  width: 65%;
+}
+
+.gallery__thumbnail {
+  width: calc(25% - 8px);
+  margin: 0 8px 8px 0;
+  float: left;
+}
+
+/* je cible le 1er élément qui a la classe "gallery__thumbnail", dans l'ordre du code HTML */
+.gallery__thumbnail:first-child {
+  /* .gallery__thumbnail:nth-child(1) { */
+  width: calc(50% - 8px);
+}
+
+/* Cibler l'iguane
+je cible le 15e élément qui a la classe "gallery__thumbnail", dans l'ordre du code HTML */
+.gallery__thumbnail:nth-child(15) {
+  border: 4px solid red;
+}
+
+.submit {
+  width: 30%;
+  background-color: #048;
+  padding: 24px 24px 8px 24px;
+}
+
+.submit__title {
+  color: #0cf;
+  text-transform: uppercase;
+  border-bottom: 2px solid #0cf;
+  line-height: 1.25;
+  font-weight: bold;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.submit__text {
+  color: yellowgreen;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 16px 0;
+}
+
+.copyright {
+  padding: 20px;
+  margin-top: 80px;
+  text-align: center;
+  color: #60b9ce;
+}
+
+/* Ciblages avancés, non BEM */
+/* > pour cibler l'enfant direct */
+/*.header-links > ul {
+  border: 1px solid pink;
+}
+
+.header-links > nav > ul {
+  border: 1px solid yellow;
+}*/
+
+/* + pour cibler un élément juste à côté d'un autre */
+/*h2 + p {
+  border: 1px solid white;
+}*/
+
+/* Fioritures, inutiles donc indispensables */
+
+/* on agrandit chaque caméléon au survol */
+.gallery__thumbnail {
+  transition: 2s;
+}
+
+.gallery__thumbnail:hover {
+  transform: scale(1.4);
+}
+
+/* effet sympa lors du survol sur les liens "socials" */
+.socials__icon {
+  transition: 1s;
+}
+
+.socials__icon:hover {
+  transform: rotate(360deg) scale(2);
+}
+
+/* le caméléon est en noir et blanc, et au survol, les couleurs reviennent */
+.cam-of-the-week__picture {
+  filter: grayscale(100%);
+  transition: 3s;
+}
+
+.cam-of-the-week__picture:hover {
+  filter: grayscale(0%);
+  /* pour vomir : transform: scale(0,0); */
+}
+
+.cam-of-the-week__title {
+  z-index: 10;
+}
+
+/* transform, ça marche aussi pour les éléments */
+aside:hover {
+  transform: scale(1.2);
+}
+
+/* Animations : faire battre le coeur */
+
+/* je crée l'animation */
+@keyframes heartbeat {
+  from {
+    opacity: 0; /* transparent */
+  }
+  to {
+    opacity: 1; /* opaque */
+  }
+}
+
+/* je cible l'élément sur lequel affecter l'animation */
+.heart {
+  animation-name: heartbeat; /* nom de l'animation définie plus haut */
+  animation-duration: 0.5s; /* durée de la transition */
+  animation-iteration-count: infinite; /* animation à faire en continue, sans arrêt */
+  animation-direction: alternate; /* aller-retour */
+}
