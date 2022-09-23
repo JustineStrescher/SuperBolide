@@ -124,9 +124,7 @@ main>p a {
     padding-right: 5px;
 }
 
-#colonne1 img:first-of-type {
-    width: 100%;
-}
+
 
 #colonne2 {
     width: 35%;
@@ -143,8 +141,9 @@ main>p a {
 aside {
     background-color: #004488;
     padding: 30px;
-    width: 30%;
+    width: 100%;
     margin-left: 20px;
+   
 }
 
 aside h2 {
