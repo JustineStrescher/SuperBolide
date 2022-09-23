@@ -112,37 +112,13 @@ main>p a {
     */
 }
 
-#colonne1 {
-    width: 35%;
-    display: flex;
-    flex-flow: row wrap;
-}
 
-#colonne1 img {
-    width: 50%;
-    padding-bottom: 5px;
-    padding-right: 5px;
-}
-
-
-
-#colonne2 {
-    width: 35%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#colonne2 img {
-    width: 50%;
-    padding-bottom: 5px;
-    padding-right: 5px;
-}
 
 aside {
     background-color: #004488;
     padding: 30px;
     width: 100%;
-    margin-left: 20px;
+ 
    
 }
 
